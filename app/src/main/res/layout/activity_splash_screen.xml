@@ -11,7 +11,7 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Your logo"
+        android:text="Food Delivery"
         android:textColor="#EAE7E7"
         android:textSize="34sp"
         android:textStyle="bold"
