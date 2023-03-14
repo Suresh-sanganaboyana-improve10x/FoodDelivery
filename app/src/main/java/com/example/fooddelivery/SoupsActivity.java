@@ -24,6 +24,5 @@ public class SoupsActivity extends AppCompatActivity {
         soups.servingNumber = "2";
         soups.weightGr = "345gr";
         soupList.add(soups);
-
     }
 }
