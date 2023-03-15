@@ -1,4 +1,4 @@
-package com.example.fooddelivery;
+package com.example.fooddelivery.soups;
 
 import android.view.LayoutInflater;
 import android.view.ViewGroup;
@@ -6,7 +6,7 @@ import android.view.ViewGroup;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.fooddelivery.databinding.SoupsItem1Binding;
+import com.example.fooddelivery.databinding.SoupsItem2Binding;
 import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
@@ -22,7 +22,7 @@ public class SoupsAdapter extends RecyclerView.Adapter<SoupsViewHolder> {
     @NonNull
     @Override
     public SoupsViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        SoupsItem1Binding binding = SoupsItem1Binding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
+        SoupsItem2Binding binding = SoupsItem2Binding.inflate(LayoutInflater.from(parent.getContext()), parent, false);
         SoupsViewHolder soupsViewHolder = new SoupsViewHolder(binding);
         return soupsViewHolder;
     }
@@ -30,11 +30,12 @@ public class SoupsAdapter extends RecyclerView.Adapter<SoupsViewHolder> {
     @Override
     public void onBindViewHolder(@NonNull SoupsViewHolder holder, int position) {
         Soups soups = soupsArrayList.get(position);
-        holder.binding.typesOfSoups.setText(soups.typeOfSoup);
-        holder.binding.detailsTxt.setText(soups.details);
-        holder.binding.servingNumberTxt.setText(soups.servingNumber);
-        holder.binding.dollerTxt.setText(soups.dollers);
-        holder.binding.weightTxt.setText(soups.weightGr);
+        Picasso.get().load(soups.dp).into(holder.binding.soupImageUrl);
+        holder.binding.soupTxt.setText(soups.typeOfSoup);
+        holder.binding.detailsText.setText(soups.details);
+        holder.binding.servingTxt.setText(soups.servingNumber);
+        holder.binding.dollersText.setText(soups.dollers);
+        holder.binding.weightText.setText(soups.weightGr);
     }
 
     @Override

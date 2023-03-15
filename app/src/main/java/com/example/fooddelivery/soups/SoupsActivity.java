@@ -1,12 +1,13 @@
-package com.example.fooddelivery;
+package com.example.fooddelivery.soups;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 
 import com.example.fooddelivery.databinding.ActivitySoupsBinding;
+import com.example.fooddelivery.soups.Soups;
+import com.example.fooddelivery.soups.SoupsAdapter;
 
 import java.util.ArrayList;
 
@@ -29,19 +30,35 @@ public class SoupsActivity extends AppCompatActivity {
 
     public void setupData() {
         Soups soups = new Soups();
-        soups.dp = "";
+        soups.dp = "https://victoriajunction.in/uploads/products/hot-sour-soup_1592725686.jpg";
         soups.typeOfSoup = "Chicken soup";
         soups.details = "Chicken, vegetables, butter, tiny pasta, green beans, carrots,...";
         soups.servingNumber = "2";
         soups.weightGr = "345gr";
         soups.dollers = "8.00$";
         soupList.add(soups);
+        soupList.add(soups);
+        soupList.add(soups);
+        soupList.add(soups);
+        soupList.add(soups);
+        soupList.add(soups);
+        soupList.add(soups);
+        soupList.add(soups);
+        soupList.add(soups);
+        soupList.add(soups);
+        soupList.add(soups);
+        soupList.add(soups);
+        soupList.add(soups);
+        soupList.add(soups);
+        soupList.add(soups);
     }
 
     public void setupSoupsRv() {
         binding.soupsRv.setLayoutManager(new LinearLayoutManager(this));
+        binding.soupsPastryRv.setLayoutManager(new LinearLayoutManager(this));
         soupsAdapter = new SoupsAdapter();
         soupsAdapter.setData(soupList);
         binding.soupsRv.setAdapter(soupsAdapter);
+        binding.soupsPastryRv.setAdapter(soupsAdapter);
     }
 }

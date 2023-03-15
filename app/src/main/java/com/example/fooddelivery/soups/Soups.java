@@ -1,4 +1,4 @@
-package com.example.fooddelivery;
+package com.example.fooddelivery.soups;
 
 public class Soups {
     public String dp;
